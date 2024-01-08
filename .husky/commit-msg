@@ -1,0 +1,7 @@
+
+. "$(dirname -- "$0")/_/husky.sh"
+
+#!/bin/sh
+# .husky/commit-msg
+
+# yarn commitlint --edit $1
