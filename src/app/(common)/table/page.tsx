@@ -1,9 +1,5 @@
 const Table = () => {
-	return (
-		<div>
-			<p>table</p>
-		</div>
-	);
+	return <div>table page</div>;
 };
 
 export default Table;
