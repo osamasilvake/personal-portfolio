@@ -1,5 +1,7 @@
 
 
+## [0.3.1](https://github.com/osamasilvake/personal-portfolio/compare/0.3.0...0.3.1) (2024-01-14)
+
 # 0.3.0 (2024-01-14)
 
 

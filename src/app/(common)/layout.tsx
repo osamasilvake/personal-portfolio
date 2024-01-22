@@ -5,8 +5,8 @@ import { Providers } from '../provider';
 const CommonLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<Providers>
-			<header>header</header>
 			<ThemeSwitch />
+			<header>header</header>
 			{children}
 			<footer>footer</footer>
 		</Providers>
