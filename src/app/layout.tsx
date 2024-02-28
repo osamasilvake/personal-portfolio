@@ -14,11 +14,12 @@ export const metadata: Metadata = {
 interface RootValue {
 	children: React.ReactNode;
 }
+
 const RootLayout = ({ children }: RootValue) => {
 	return (
 		<html lang="en" suppressHydrationWarning={true}>
 			<body className={inter.className} suppressHydrationWarning={true}>
-				{children}
+				<div>{children}</div>
 			</body>
 		</html>
 	);

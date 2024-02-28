@@ -1,7 +1,8 @@
-import { StaticImageData } from 'next/image';
+import React from 'react';
 
 export interface Service {
-	image: StaticImageData;
+	Icon: React.ElementType;
 	title: string;
 	description: string;
+	size: string;
 }

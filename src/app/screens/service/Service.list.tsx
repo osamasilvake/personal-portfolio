@@ -1,22 +1,26 @@
-import web1 from '@/assets/images/web-1.png';
-import web2 from '@/assets/images/web-2.png';
+import { CgWebsite } from 'react-icons/cg';
+import { LuLayout } from 'react-icons/lu';
+import { RiPresentationFill } from 'react-icons/ri';
 
 import { Service } from './Service.interface';
 
 export const ServiceList: Service[] = [
 	{
-		image: web1,
+		Icon: LuLayout,
 		title: 'Web Developer',
-		description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit'
+		description: 'Translate your ideas into digital reality with web development services',
+		size: 'h-6 w-7'
 	},
 	{
-		image: web2,
+		Icon: CgWebsite,
 		title: 'UX/Ui Design ',
-		description: 'Lorem ipsum dolor you sit consectetur, adipisicing elit'
+		description: 'UX/UI design expertise to engaging user experiences,',
+		size: 'h-8 w-6'
 	},
 	{
-		image: web1,
+		Icon: RiPresentationFill,
 		title: 'Web Consulting',
-		description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit'
+		description: 'Navigate the complexities of the online world with consulting services',
+		size: 'h-8 w-6'
 	}
 ];

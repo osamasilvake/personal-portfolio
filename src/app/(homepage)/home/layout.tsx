@@ -1,4 +1,5 @@
 import Header from '@/components/frame/header/Header';
+import { ThemeProvider } from '@/components/ThemeProvider';
 
 interface RootValue {
 	children: React.ReactNode;
@@ -6,10 +7,14 @@ interface RootValue {
 
 const HomeLayout = ({ children }: RootValue) => {
 	return (
-		<div className="bg-101 pb-10">
-			<Header />
-			{children}
-		</div>
+		<ThemeProvider enableSystem defaultTheme="gray" attribute="class" themes={['gray', 'dark']}>
+			<div>
+				<div>
+					<Header />
+				</div>
+				{children}
+			</div>
+		</ThemeProvider>
 	);
 };
 

@@ -11,13 +11,10 @@ const config: Config = {
 			colors: {
 				101: '#EEEFEE',
 				102: '#929392'
-			},
-			gridTemplateColumns: {
-				// Complex site-specific column configuration
-				'main-layout': '120px 200px 200px 410px 280px 120px'
 			}
 		}
 	},
-	plugins: []
+	plugins: [],
+	darkMode: ['class']
 };
 export default config;
