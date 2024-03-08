@@ -1,4 +1,4 @@
-export interface Header {
+export interface HeaderInterface {
 	path: string;
 	label: string;
 }

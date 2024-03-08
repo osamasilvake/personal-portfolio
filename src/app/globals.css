@@ -8,6 +8,10 @@
 	box-sizing: border-box;
 }
 
-.gray {
+html {
+	scroll-behavior: smooth;
+}
+
+.light {
 	background-color: #eeefee;
 }

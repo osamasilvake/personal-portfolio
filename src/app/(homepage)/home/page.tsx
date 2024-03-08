@@ -7,13 +7,20 @@ import sergio from '@/assets/images/sergio.jpg';
 const Home = () => {
 	return (
 		<main>
-			<h1 className="text-5xl text-center font-extrabold pt-14 leading-tight sm:leading-none">
+			<h1 className="text-5xl text-center font-extrabold mt-16 dark:text-stone-200 leading-6">
 				<span className="border-b-4 border-gray-300">Mu</span>hammad Usama
 			</h1>
-			<div className="flex justify-evenly px-6 flex-col-reverse pt-20 pb-10 lg:gap-8 lg:px-5  xl:gap-0 lg:flex-row 2xl:container 2xl:mx-auto">
+
+			<div className="flex justify-between flex-col-reverse mt-20 mb-10 lg:gap-5 xl:gap-0 lg:flex-row">
 				<Service />
 				<div className="pt-10 pb-5 lg:pt-0">
-					<Image src={sergio} alt="Osama khan" className="rounded-lg lg:w-96 lg:h-96" />
+					<Image
+						src={sergio}
+						alt="Muhammad usama"
+						className="rounded-lg lg:w-96 lg:h-96 lg:p-1"
+						priority
+						tabIndex={0}
+					/>
 				</div>
 				<Profile />
 			</div>

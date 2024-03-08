@@ -1,5 +1,4 @@
 'use client';
-import Link from 'next/link';
 
 import Button from '@/components/common/button/Button';
 import { ButtonVariantEnum } from '@/components/common/button/Button.enum';
@@ -7,43 +6,51 @@ import { ButtonVariantEnum } from '@/components/common/button/Button.enum';
 import { ProfileType } from './Profile.enum';
 
 const Profile = () => {
-	const handleClick = () => {
-		alert('clicked');
-	};
-
 	return (
-		<div className="w-full lg:w-72 xl:pl-2">
-			<h3 className="pb-7 font-bold text-xl">Web Specialist base in pak</h3>
-			<p className="pb-4">
-				I am a self-taught front end developer from Pakistan, specializing in <strong>React</strong>,
-				<strong>Next.js</strong>, and <strong>Typescript</strong>.
-			</p>
-			<p>I&apos;m passionate about building cool websites and I love sharing the things I learn with my audience.</p>
+		<div className="w-full lg:w-72">
+			<h2
+				className="pb-7 text-xl xl:text-2xl dark:text-stone-200"
+				tabIndex={0}
+				aria-label="Web Specialist base in pakistan">
+				Web Specialist base in pak
+			</h2>
+			<div>
+				<p className="pb-3 dark:text-stone-300 text-justify">
+					I am a self-taught front end developer from Pakistan, specializing in{' '}
+					<strong className="dark:text-stone-200">React</strong>,
+					<strong className="dark:text-stone-200">Next js</strong>, and{' '}
+					<strong className="dark:text-stone-200">Typescript</strong>.
+				</p>
+				<p className="dark:text-stone-300 text-justify">
+					I&apos;m passionate about building cool websites and I love sharing the things I learn with my audience.
+				</p>
+			</div>
+
 			<div className="pt-8 pb-7">
-				<Button borderClass="border-2" variant={ButtonVariantEnum.OUTLINED_IN_DEFAULT}>
-					<Link href={ProfileType.GITHUB} target="_blank">
-						Hire me
-					</Link>
-				</Button>
 				<Button
-					borderClass="border"
-					paddingClass="px-7 py-2"
-					onClickHandler={handleClick}
-					isDisabled={true}
-					variant={ButtonVariantEnum.OUTLINED_IN_PURPLE}>
-					Post
+					isDisabled={false}
+					variant={ButtonVariantEnum.OUTLINED_IN_DEFAULT}
+					onClickHandler={() => window.open(ProfileType.GITHUB, '_blank')}>
+					Hire me
 				</Button>
 			</div>
-			<div className="flex flex-col gap-3 w-60">
-				<div className="flex gap-8">
-					<p className="font-bold text-xl">1 Years</p>
-					<p className="font-bold text-xl">15+</p>
-					<p className="font-bold text-xl">98.8%</p>
+
+			<div>
+				<div className="flex gap-9 pb-3">
+					<p className="font-bold text-xl dark:text-stone-200" tabIndex={0}>
+						1 Years
+					</p>
+					<p className="font-bold text-xl dark:text-stone-200" tabIndex={0}>
+						15+
+					</p>
+					<p className="font-bold text-xl dark:text-stone-200 pl-1" tabIndex={0}>
+						98.8%
+					</p>
 				</div>
-				<div className="flex gap-6">
-					<p className="text-gray-400 text-sm">Experience</p>
-					<p className="text-gray-400 text-sm pl-1">Clients</p>
-					<p className="text-gray-400 text-sm">Satisfaction</p>
+				<div className="flex gap-7">
+					<p className="dark:text-stone-300 text-sm">Experience</p>
+					<p className="dark:text-stone-300 text-sm pl-2">Clients</p>
+					<p className="dark:text-stone-300 text-sm pl-2">Satisfaction</p>
 				</div>
 			</div>
 		</div>

@@ -11,6 +11,9 @@ const config: Config = {
 			colors: {
 				101: '#EEEFEE',
 				102: '#929392'
+			},
+			maxWidth: {
+				201: '75rem'
 			}
 		}
 	},

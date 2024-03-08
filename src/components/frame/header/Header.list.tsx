@@ -1,21 +1,19 @@
-import { HeaderType } from './Header.enum';
-import { Header } from './Header.interface';
+import appRoutes from '@/app/routes/Routes.path';
 
-export const HeaderList: Header[] = [
+import { HeaderType } from './Header.enum';
+import { HeaderInterface } from './Header.interface';
+
+export const HeaderList: HeaderInterface[] = [
 	{
-		path: '/home',
+		path: appRoutes.SCREENS.HOME.MAIN,
 		label: HeaderType.HOME
 	},
 	{
-		path: '/home/portfolio',
+		path: appRoutes.SCREENS.PORTFOLIO.MAIN,
 		label: HeaderType.PORTFOLIO
 	},
 	{
-		path: '/blog',
+		path: appRoutes.SCREENS.BLOG.MAIN,
 		label: HeaderType.BLOG
-	},
-	{
-		path: '/home/about',
-		label: HeaderType.ABOUT
 	}
 ];

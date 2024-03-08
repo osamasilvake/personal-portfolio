@@ -1,46 +1,32 @@
 'use client';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { FaTwitter } from 'react-icons/fa';
-import { FaSquareFacebook } from 'react-icons/fa6';
-import { LuInstagram } from 'react-icons/lu';
 
-import ThemeToggle from '@/components/ThemeToggle';
+import ColorToggle from '@/components/frame/header/color-mode/ColorToggle';
 
 import { HeaderList } from './Header.list';
+import HeaderIcon from './header-icon/HeaderIcon';
+import { HeaderIcons } from './header-icon/HeaderIcon.list';
+import HeaderItem from './HeaderItem';
 
 const Header = () => {
-	const pathname = usePathname();
-
 	return (
-		<header className="hidden pt-5 sm:block  2xl:container mx-auto">
-			<nav className="flex justify-around items-center">
-				<ul className="flex gap-10">
-					{HeaderList?.map((item, index) => (
-						<li key={index}>
-							<Link
-								href={item.path}
-								className={`${
-									pathname === item.path
-										? 'text-gray-600 dark:text-gray-300 border-b-4 border-gray-300 pb-2'
-										: ''
-								}`}>
-								{item.label}
-							</Link>
-						</li>
-					))}
+		<header>
+			<nav className="flex justify-between items-center pt-5">
+				<ul className="flex gap-10 w-72">
+					{HeaderList?.map((item) => <HeaderItem key={item.path} path={item.path} label={item.label} />)}
 				</ul>
+
 				<div>
-					<p className="font-bold text-xl w-48 hidden lg:block">
+					<p className="font-bold text-xl w-48 leading-8 hidden md:block" tabIndex={0}>
 						Osa<span className="text-102">mi</span>
 					</p>
 				</div>
-				<div className="flex items-center gap-7">
-					<LuInstagram className="w-5 h-5" aria-label="Instagram" />
-					<FaSquareFacebook className="w-5 h-5" aria-label="Facebook" />
-					<FaTwitter className="w-5 h-5" aria-label="Twitter" />
-					<div className="pt-1">
-						<ThemeToggle />
+
+				<div className="flex items-center gap-8">
+					{HeaderIcons?.map((icon) => {
+						return <HeaderIcon key={icon.url} icon={icon} />;
+					})}
+					<div className="w-5 h-5">
+						<ColorToggle />
 					</div>
 				</div>
 			</nav>

@@ -1,5 +1,3 @@
-import React from 'react';
-
 export interface Service {
 	Icon: React.ElementType;
 	title: string;
