@@ -2,13 +2,10 @@ const appRoutes = {
 	APP: '/',
 	SCREENS: {
 		HOME: {
-			MAIN: '/home'
+			MAIN: '/'
 		},
 		PORTFOLIO: {
-			MAIN: '/home/portfolio'
-		},
-		BLOG: {
-			MAIN: '/home/blog'
+			MAIN: '/portfolio'
 		}
 	}
 };

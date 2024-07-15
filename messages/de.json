@@ -1,0 +1,108 @@
+{
+	"IndexPage": {
+		"title": "next-intl Beispiel",
+		"description": "Dies ist ein Beispiel, das die Verwendung von <code>next-intl</code> mit dem Next.js App Router demonstriert. Bei Ändern der Sprache rechts oben ändert sich der Inhalt dieser Seite."
+	},
+	"HomePage": {
+		"title": "Pfadnamen",
+		"description": "<p>Auch die Pfadnamen sind internationalisiert.</p><p>Wenn du die Standardsprache Englisch verwendest, siehst du <code>/en/pathnames</code> in der Adressleiste des Browsers auf dieser Seite.</p><p>Wenn du die Sprache auf Deutsch änderst, wird die URL entsprechend lokalisiert (<code>/de/pfadnamen</code>).</p>"
+	},
+	"Service": {
+		"webDeveloper": {
+			"title": "Web Entwickler",
+			"description": "Übersetzen sse ihre ideen mit webentwicklungsdiensten in die digitale realität"
+		},
+		"uxUiDesign": {
+			"title": "UX/Ui Zeichnung",
+			"description": "UX/UI-Design expertise für ansprechende benutzererlebnisse"
+		},
+		"webConsulting": {
+			"title": "Web Beratung",
+			"description": "Navigieren sie mit beratungsdiensten durch die komplexität der online-welt"
+		}
+	},
+	"Profile": {
+		"description": {
+			"intro": "Ich bin ein autodidaktischer Frontend-Entwickler aus Pakistan, auf",
+			"specialties": "React.js, Next.js, Typescript",
+			"passion": "Ich bin leidenschaftlich daran interessiert, coole Websites zu erstellen, und ich teile gerne die Dinge, die ich lerne, mit meinem"
+		},
+		"statistics": {
+			"experience": "Erfahrung",
+			"clients": "Kunden",
+			"satisfaction": "Zufriedenheit",
+			"years": "1 Jahr",
+			"clientCount": "10+",
+			"satisfactionRate": "98.8%"
+		},
+		"button": {
+			"title": "Stellen sie"
+		}
+	},
+	"Summary": {
+		"description": {
+			"intro": "Ich bin ein engagierter Frontend-Entwickler mit meiner Expertise in HTML5, SCSS, Javascript, Typescript, React und Next.js. Es macht mir Spaß, moderne und reaktionsfähige UX/UI-Designs zu entwerfen und zu entwickeln, die für den Endbenutzer intuitiv und ansprechend sind. Ich liebe es wirklich, Apps von Grund auf zu entwickeln und möchte in einem organisierten Team und Umfeld arbeiten.",
+			"code_quality": "Ich halte meinen Code gerne sauber und gut organisiert. Ich verwende Einrückungen und füge Kommentare zu jedem Teil des Codes hinzu, damit ich und das Team die Funktionalität später leichter verstehen können. Darüber hinaus versuche ich, eine gute Ordnerstruktur der App beizubehalten, um die Gesamtqualität des Projekts aufrechtzuerhalten und eine einfache Skalierung der App ohne große Hürden und Mühen zu ermöglichen.",
+			"current_learning": "Derzeit habe ich begonnen, mich über das Vue Framework zu informieren."
+		}
+	},
+	"PortfolioPageHeadings": {
+		"summary": {
+			"title": "Zusammenfassung"
+		},
+		"skill": {
+			"title": "Sfassung"
+		},
+		"education": {
+			"title": "Ausbildung"
+		},
+		"experience": {
+			"title": "Erfahrung"
+		},
+		"interest": {
+			"title": "Interesse"
+		},
+		"language": {
+			"title": "Sprachen"
+		}
+	},
+	"Error": {
+		"title": "Etwas ist schief gelaufen!",
+		"description": "<p>Es ist leider ein Problem aufgetreten.</p><p>Du kannst versuchen <retry>diese Seite neu zu laden</retry>.</p>"
+	},
+	"NotFoundPage": {
+		"title": "Seite nicht gefunden",
+		"description": "Bitte überprüfe die Addressleiste deines Browsers oder verwende die Navigation um zu einer bekannten Seite zu wechseln."
+	},
+	"LocaleLayout": {
+		"title": "next-intl Beispiel"
+	},
+	"LocaleSwitcher": {
+		"label": "Sprache ändern",
+		"locale": "{locale, select, de {De} en {En} other {Unbekannt}}"
+	},
+	"Navigation": {
+		"home": "Start",
+		"portfolio": "aktenmappen"
+	},
+	"Button": {
+		"title": "Mieten"
+	},
+	"PageLayout": {
+		"links": {
+			"docs": {
+				"title": "Dokumentation",
+				"description": "Erfahre mehr über next-intl in der offiziellen Dokumentation.",
+				"href": "https://next-intl-docs.vercel.app/"
+			},
+			"source": {
+				"title": "Quellcode",
+				"description": "Sieh dir den Quellcode dieses Beispiels auf GitHub an.",
+				"href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router"
+			}
+		}
+	},
+	"Footer": {
+		"title": "gemacht mit"
+	}
+}

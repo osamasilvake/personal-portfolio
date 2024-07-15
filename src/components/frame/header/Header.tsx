@@ -1,23 +1,28 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 import ColorToggle from '@/components/frame/header/color-mode/ColorToggle';
 
-import { HeaderList } from './Header.list';
 import HeaderIcon from './header-icon/HeaderIcon';
 import { HeaderIcons } from './header-icon/HeaderIcon.list';
-import HeaderItem from './HeaderItem';
+import HeaderLink from './HeaderLink';
+import LanguageToggle from './language-mode/LanguageToggle';
 
 const Header = () => {
+	const t = useTranslations('Navigation');
+
 	return (
 		<header>
 			<nav className="flex justify-between items-center pt-5">
-				<ul className="flex gap-10 w-72">
-					{HeaderList?.map((item) => <HeaderItem key={item.path} path={item.path} label={item.label} />)}
-				</ul>
+				<div className="flex gap-8 sm:w-72">
+					<HeaderLink href="/" title={t('home')} />
+					<HeaderLink href="/portfolio" title={t('portfolio')} />
+				</div>
 
 				<div>
-					<p className="font-bold text-xl w-48 leading-8 hidden md:block" tabIndex={0}>
-						Osa<span className="text-102">mi</span>
+					<p tabIndex={0} className="dark:text-[#6a6c6d] w-40 font-semibold text-xl  leading-8 hidden md:block">
+						Osami
 					</p>
 				</div>
 
@@ -27,6 +32,9 @@ const Header = () => {
 					})}
 					<div className="w-5 h-5">
 						<ColorToggle />
+					</div>
+					<div className="h-6 bg-105 dark:bg-108">
+						<LanguageToggle />
 					</div>
 				</div>
 			</nav>

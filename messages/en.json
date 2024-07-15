@@ -1,0 +1,112 @@
+{
+	"IndexPage": {
+		"title": "next-intl example",
+		"description": "This is a basic example that demonstrates the usage of <code>next-intl</code> with the Next.js App Router. Try changing the locale in the top right corner and see how the content changes."
+	},
+	"HomePage": {
+		"title": "Pathnames",
+		"description": "<p>The pathnames are internationalized too.</p><p>If you're using the default language English, you'll see <code>/en/pathnames</code> in the browser address bar on this page.</p><p>If you change the locale to German, the URL is localized accordingly (<code>/de/pfadnamen</code>).</p>"
+	},
+
+	"Service": {
+		"webDeveloper": {
+			"title": "Web Developer",
+
+			"description": "Translate your ideas into digital reality with web development services"
+		},
+		"uxUiDesign": {
+			"title": "UX/Ui Design",
+			"description": "UX/UI design expertise to engaging user experiences"
+		},
+		"webConsulting": {
+			"title": "Web Consulting",
+			"description": "Navigate the complexities of the online world with consulting services"
+		}
+	},
+	"Profile": {
+		"description": {
+			"intro": "I am a self-taught front end developer from Pakistan, specializing in ",
+			"specialties": "React.js, Next.js, Typescript",
+			"passion": "I am passionate about building cool websites and I love sharing the things I learn with my audience."
+		},
+		"statistics": {
+			"experience": "Experience",
+			"clients": "Clients",
+			"satisfaction": "Satisfaction",
+			"years": "1 Years",
+			"clientCount": "10+",
+			"satisfactionRate": "98.8%"
+		},
+		"button": {
+			"title": "Hire me"
+		}
+	},
+	"Summary": {
+		"description": {
+			"intro": "I am a dedicated Frontend Developer with my expertise in HTML5, SCSS, Javascript, Typescript, React, and Next.js. I enjoy designing and developing modern and responsive UX/UI designs that are intuitive and pleasing for the end-users. I really love to build apps from scratch and want to work in an organized team and environment.",
+			"code_quality": "I like to keep my code clean and well-organized. I use indentation and add comments to each part of the code to make it easy for me and the team to later understand the functionality with ease. Moreover, I try to keep a good folder structure of the app to maintain the overall quality of the project and make it easy to scale the app without any big hurdles and efforts.",
+			"current_learning": "Currently, I have started learning about the Vue Framework."
+		}
+	},
+	"PortfolioPageHeadings": {
+		"summary": {
+			"title": "Summary"
+		},
+		"skill": {
+			"title": "Skills"
+		},
+		"education": {
+			"title": "Education"
+		},
+		"experience": {
+			"title": "Experience"
+		},
+		"interest": {
+			"title": "Interest"
+		},
+		"language": {
+			"title": "Languages"
+		}
+	},
+	"Tooltip": {
+		"skills": {
+			"title": "Javascript"
+		}
+	},
+	"Error": {
+		"title": "Something went wrong!",
+		"description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>"
+	},
+	"NotFoundPage": {
+		"title": "Page not found",
+		"description": "Please double-check the browser address bar or use the navigation to go to a known page."
+	},
+	"LocaleLayout": {
+		"title": "next-intl example"
+	},
+	"LocaleSwitcher": {
+		"label": "Change language",
+		"locale": "{locale, select, de {De} en {En} other {Unknown}}"
+	},
+	"Navigation": {
+		"home": "Home",
+		"portfolio": "Portfolio"
+	},
+	"PageLayout": {
+		"links": {
+			"docs": {
+				"title": "Docs",
+				"description": "Learn more about next-intl in the official docs.",
+				"href": "https://next-intl-docs.vercel.app/"
+			},
+			"source": {
+				"title": "Source code",
+				"description": "Browse the source code of this example on GitHub.",
+				"href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router"
+			}
+		}
+	},
+	"Footer": {
+		"title": "Made with"
+	}
+}

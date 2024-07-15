@@ -1,5 +1,4 @@
 export enum HeaderIconType {
-	FACEBOOK = 'https://www.facebook.com/',
-	TWITTER = 'https://twitter.com/',
+	GITHUB = 'https://www.github.com/',
 	INSTAGRAM = 'https://www.instagram.com/'
 }

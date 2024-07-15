@@ -11,9 +11,5 @@ export const HeaderList: HeaderInterface[] = [
 	{
 		path: appRoutes.SCREENS.PORTFOLIO.MAIN,
 		label: HeaderType.PORTFOLIO
-	},
-	{
-		path: appRoutes.SCREENS.BLOG.MAIN,
-		label: HeaderType.BLOG
 	}
 ];
