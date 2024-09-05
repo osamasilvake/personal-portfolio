@@ -18,6 +18,11 @@ export const skillList: TagsData[] = [
 	},
 	{
 		id: 3,
+		title: 'UI Frameworks',
+		items: ['Material-UI']
+	},
+	{
+		id: 4,
 		title: 'Layout',
 		items: [
 			'HTML5',
@@ -31,12 +36,12 @@ export const skillList: TagsData[] = [
 		]
 	},
 	{
-		id: 4,
+		id: 5,
 		title: 'Database',
 		items: ['Firebase', 'Mongodb', 'Mysql']
 	},
 	{
-		id: 5,
+		id: 6,
 		title: 'Miscellaneous',
 		items: ['Yarn', 'NPM', 'Node', 'Git', 'VSCode', 'Xcode', 'WebStorm']
 	}

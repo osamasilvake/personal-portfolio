@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@function fontSize($size) {
+	@return $size / 16px * 1rem;
+}
+
+h1 {
+	font-size: fontSize(40px);
+	font-weight: 700;
+	line-height: 2.25rem;
+	color: rgb(73, 68, 68);
+}
+
+h2 {
+	font-size: fontSize(30px);
+	font-weight: 500;
+}

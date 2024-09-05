@@ -1,11 +1,11 @@
 import Image from 'next/image';
 
 import ToolTip from '@/components/common/tooltip/ToolTip';
-import { calculateDuration, formatDuration } from '@/utils/Date';
 
 import { ExperienceListType } from '../experience/Experience.enum';
 import PortfolioHeading from '../portfolio-heading/PortfolioHeading';
 import { PortfolioProps } from './PortfolioSection.interface';
+import { calculateDuration, formatDuration } from './PortfolioSectionDate';
 
 const PortfolioSection = (props: PortfolioProps) => {
 	const { headingLevel, title, subTitle, experience, list, position } = props;
@@ -22,7 +22,7 @@ const PortfolioSection = (props: PortfolioProps) => {
 		if (id === ExperienceListType.Current) {
 			return 'bg-103';
 		} else {
-			return 'bg-white dark:bg-[#212121]';
+			return 'bg-white dark:bg-106';
 		}
 	};
 
@@ -30,7 +30,7 @@ const PortfolioSection = (props: PortfolioProps) => {
 		if (id === ExperienceListType.Current) {
 			return 'text-white';
 		} else {
-			return 'text-[#6a6c6d]';
+			return 'text-108';
 		}
 	};
 
@@ -42,7 +42,10 @@ const PortfolioSection = (props: PortfolioProps) => {
 			<div className="relative">
 				<ul className={`border-b dark:border-b-gray-700 pb-10 ${classes.listStyle}`}>
 					{list?.map((item) => {
-						const duration = calculateDuration({ startDate: item.startDate, endDate: item.endDate });
+						const duration = calculateDuration({
+							startDate: item.startDate?.toString(),
+							endDate: item.endDate?.toString()
+						});
 						const durationString = formatDuration(duration);
 
 						return (
@@ -60,15 +63,15 @@ const PortfolioSection = (props: PortfolioProps) => {
 											<Image
 												src={item.image}
 												alt={item.title}
-												className="cursor-help h-12 w-12 p-0.5 border border-104 dark:border-[#6a6c6d]"
+												className="cursor-help size-12 p-0.5 border border-104 dark:border-108"
 											/>
 										)}
 									</div>
 								</ToolTip>
 
 								<div>
-									<h3 className="dark:text-[#6a6c6d] text-xl font-semibold">{item.title} </h3>
-									<p className="text-gray-500 dark:text-[#6a6c6d]">
+									<h3 className="dark:text-108 text-xl font-semibold">{item.title} </h3>
+									<p className="text-gray-500 dark:text-108">
 										{item.description}
 										{item.current && (
 											<span className="border ml-1 px-1 border-red-400 rounded-xl text-red-400 text-xs">

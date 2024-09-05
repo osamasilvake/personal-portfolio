@@ -12,16 +12,20 @@ const Profile = () => {
 
 	return (
 		<div className="w-full lg:w-72">
-			<div>
-				<p className="pb-3 dark:text-108 text-justify">
-					{t('description.intro')} {''}
+			<div aria-labelledby="profile-introduction">
+				<h2 id="profile-introduction" className="sr-only">
+					Profile Introduction
+				</h2>
+				<p className="mb-3 dark:text-108 text-justify">
+					{t('description.intro')}
 					<strong className="dark:text-108">{t('description.specialties')}</strong>
 				</p>
 				<p className="dark:text-108 text-justify">{t('description.passion')}</p>
 			</div>
 
-			<div className="pt-12 pb-7">
+			<div className="mt-12 mb-12">
 				<Button
+					label="button"
 					isDisabled={false}
 					variant={ButtonVariantEnum.OUTLINED_IN_DEFAULT}
 					onClickHandler={() => window.open(ProfileType.GITHUB, '_blank')}>
@@ -29,8 +33,8 @@ const Profile = () => {
 				</Button>
 			</div>
 
-			<div>
-				<div className="flex pb-1">
+			<div aria-label="profile-statistics">
+				<div className="flex mb-1">
 					<p className="font-bold text-xl dark:text-108 w-28">{t('statistics.years')}</p>
 					<p className="font-bold text-xl dark:text-108 w-20">{t('statistics.clientCount')}</p>
 					<p className="font-bold text-xl dark:text-108">{t('statistics.satisfactionRate')}</p>

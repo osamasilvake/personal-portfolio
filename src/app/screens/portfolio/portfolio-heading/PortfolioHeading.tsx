@@ -5,14 +5,14 @@ const PortfolioHeading = (props: PortfolioProps) => {
 	const { title, subTitle, headingLevel = PortfolioHeadingLevel.H1, headingStyle } = props;
 	const Heading = headingLevel;
 
-	const size = {
-		large: headingLevel === PortfolioHeadingLevel.H1 ? 'text-3xl' : '',
-		medium: headingLevel === PortfolioHeadingLevel.H2 ? 'text-3xl' : ''
-	};
+	// const size = {
+	// 	large: headingLevel === PortfolioHeadingLevel.H1 ? 'text-3xl' : '',
+	// 	medium: headingLevel === PortfolioHeadingLevel.H2 ? 'text-3xl' : ''
+	// };
 
 	return (
 		<div>
-			<Heading className={`font-semibold dark:text-108 ${headingStyle} ${size.large} ${size.medium}`}>{title}</Heading>
+			<Heading className={`dark:text-108 ${headingStyle}`}>{title}</Heading>
 			<p className="dark:text-108 pt-1">{subTitle}</p>
 		</div>
 	);

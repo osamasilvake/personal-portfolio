@@ -3,6 +3,7 @@ import { ComponentProps } from 'react';
 
 import { AppPathnames } from '@/config';
 import { Link } from '@/navigation';
+
 const HeaderLink = <Pathname extends AppPathnames>({ href, title }: ComponentProps<typeof Link<Pathname>>) => {
 	const selectedLayoutSegment = useSelectedLayoutSegment();
 	const pathname = selectedLayoutSegment ? `/${selectedLayoutSegment}` : '/';

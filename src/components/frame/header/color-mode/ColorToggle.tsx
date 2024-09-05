@@ -15,11 +15,11 @@ const ColorToggle = () => {
 	};
 
 	return (
-		<IconButton onClickHandler={changeTheme} label="light dark mode">
+		<IconButton onClickHandler={changeTheme} label="Color toggle">
 			{theme === ColorType.LIGHT ? (
-				<FiMoon className="w-5 h-5 text-black" />
+				<FiMoon className="w-6 h-6 text-black" aria-label="Switch to dark " />
 			) : (
-				<FiSun className="w-5 h-5 text-orange-400" />
+				<FiSun className="w-6 h-6 text-orange-400" aria-label="Switch to light" />
 			)}
 		</IconButton>
 	);
