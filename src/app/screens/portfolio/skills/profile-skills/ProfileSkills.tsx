@@ -15,7 +15,7 @@ const ProfileSkills = () => {
 							<Image
 								src={skill.image}
 								alt={skill.name}
-								className="cursor-help h-401 w-303 p-0.5 border border-104 dark:border-[#6a6c6d]"
+								className="cursor-help h-401 w-303 p-0.5 border border-104 dark:border-108"
 							/>
 						</div>
 					</ToolTip>

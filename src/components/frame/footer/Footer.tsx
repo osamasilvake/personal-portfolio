@@ -8,9 +8,9 @@ const Footer = () => {
 
 	return (
 		<footer className="flex justify-center items-center gap-1 p-2.5 border-t dark:border-t-gray-700">
-			<p className="text-sm dark:text-[#6a6c6d]">{t('title')}</p>
+			<p className="text-sm dark:text-108">{t('title')}</p>
 			<Image src={nextjs} alt="Next.js" className="w-5 h-5 rounded-full" />
-			<span className="text-sm dark:text-[#6a6c6d]">(14.4.1)</span>
+			<span className="text-sm dark:text-108">(14.4.1)</span>
 		</footer>
 	);
 };

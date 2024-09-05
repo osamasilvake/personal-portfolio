@@ -29,9 +29,10 @@ const LanguageToggle = () => {
 	};
 
 	return (
-		<div role="button">
+		<div aria-label="Language toggle">
 			<Button
 				label="English"
+				ariaPressed={localActive === LanguageType.ENGLISH}
 				active={`${localActive === LanguageType.ENGLISH ? 'bg-107 rounded-r-2xl' : ''}`}
 				buttonStyle="w-10 h-6 px-2"
 				onClickHandler={() => onLanguageChange(LanguageType.ENGLISH)}
@@ -40,6 +41,7 @@ const LanguageToggle = () => {
 			</Button>
 			<Button
 				label="German"
+				ariaPressed={localActive === LanguageType.GERMAN}
 				active={`${localActive === LanguageType.GERMAN ? 'bg-107 rounded-l-2xl' : ''}`}
 				buttonStyle="w-10 h-6 px-2"
 				onClickHandler={() => onLanguageChange(LanguageType.GERMAN)}

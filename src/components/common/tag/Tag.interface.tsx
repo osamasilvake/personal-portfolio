@@ -3,3 +3,7 @@ export interface TagsData {
 	title?: string;
 	id: number;
 }
+
+export interface TagProps {
+	items: string[];
+}

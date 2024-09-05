@@ -21,8 +21,8 @@ const Skills = () => {
 			<section>
 				{skillList.map((item) => {
 					return (
-						<div key={item.id}>
-							<h3 className="pb-2 pt-3 font-semibold dark:text-108">{item.title}</h3>
+						<div key={item.id} className="mb-2">
+							<h3 className="mb-4 mt-5 font-semibold dark:text-108">{item.title}</h3>
 							<Tag items={item.items} />
 						</div>
 					);

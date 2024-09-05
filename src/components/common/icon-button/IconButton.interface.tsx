@@ -7,4 +7,5 @@ export interface IconButtonProps {
 	variant?: IconButtonVariantEnum;
 	onClickHandler?: () => void;
 	label?: string;
+	ariaPressed?: boolean;
 }

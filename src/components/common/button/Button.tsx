@@ -9,7 +9,8 @@ const Button = (props: ButtonInterface) => {
 		isDisabled,
 		onClickHandler,
 		buttonStyle,
-		label
+		label,
+		ariaPressed
 	} = props;
 
 	const variants = {
@@ -35,6 +36,7 @@ const Button = (props: ButtonInterface) => {
 	return (
 		<button
 			aria-label={label}
+			aria-pressed={ariaPressed}
 			disabled={isDisabled}
 			onClick={onClickHandler}
 			className={`${variants.disabled}

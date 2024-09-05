@@ -10,18 +10,18 @@ const Language = () => {
 	const t = useTranslations('PortfolioPageHeadings');
 
 	return (
-		<div className="pt-8">
+		<section className="pt-8 pb-6 border-b dark:border-b-gray-700" aria-label="language">
 			<PortfolioHeading
 				headingLevel={PortfolioHeadingLevel.H2}
 				title={t('language.title')}
-				subTitle="Learning German B2"
+				subTitle={t('language.sub_title')}
 			/>
-			<div className="pt-6">
+			<div className="mt-8">
 				{languageList.map((item) => (
 					<Tag items={item.items} key={item.id} />
 				))}
 			</div>
-		</div>
+		</section>
 	);
 };
 

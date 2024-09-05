@@ -1,11 +1,13 @@
+import dayjs from 'dayjs';
+
 export interface ExperienceItem {
 	id: string;
 	title: string;
 	description: string;
 	content: string;
 	image: string;
-	startDate: string;
-	endDate?: string | null;
+	startDate: dayjs.Dayjs;
+	endDate?: dayjs.Dayjs | null;
 	current?: string;
 	name?: string;
 }

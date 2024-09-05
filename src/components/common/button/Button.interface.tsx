@@ -7,6 +7,7 @@ export interface ButtonInterface {
 	variant?: ButtonVariantEnum;
 	isDisabled?: boolean;
 	label?: string;
+	ariaPressed?: boolean;
 	active?: string;
 	onClickHandler?: () => void;
 	buttonStyle?: string;

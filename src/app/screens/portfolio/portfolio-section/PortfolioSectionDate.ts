@@ -1,17 +1,9 @@
 import dayjs from 'dayjs';
 import duration from 'dayjs/plugin/duration';
 
+import { Calculate, Format } from './PortfolioSection.interface';
+
 dayjs.extend(duration);
-
-interface Calculate {
-	startDate: string | undefined;
-	endDate?: string | null;
-}
-
-interface Format {
-	years: number;
-	months: number;
-}
 
 export const calculateDuration = ({ startDate, endDate }: Calculate) => {
 	const start = dayjs(startDate);
