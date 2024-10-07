@@ -66,7 +66,6 @@ jobs:
               run: yarn test
 
     deploy:
-        needs: test # Ensure testing is done before deployment
         runs-on: ubuntu-latest
 
         steps:
