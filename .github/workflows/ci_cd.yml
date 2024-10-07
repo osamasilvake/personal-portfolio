@@ -93,7 +93,7 @@ jobs:
               run: yarn build
 
             - name: Install Netlify CLI
-              run: yarn add -g netlify-cli
+              run: npm install -g netlify-cli
 
             - name: Deploy to Netlify
               run: npx netlify deploy --prod --dir=.next
