@@ -92,6 +92,9 @@ jobs:
             - name: Build the App
               run: yarn build
 
+            - name: Install Netlify CLI
+              run: npm install -g netlify-cli
+
             - name: Deploy to Netlify
               run: npx netlify deploy --prod --dir=.next
               env:
