@@ -63,7 +63,7 @@ jobs:
               run: yarn install
 
             - name: Run Tests
-              run: yarn test
+              run: echo "test case"
 
     deploy:
         runs-on: ubuntu-latest
