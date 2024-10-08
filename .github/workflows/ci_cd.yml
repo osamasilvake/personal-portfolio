@@ -92,11 +92,12 @@ jobs:
             - name: Build the App
               run: yarn build
 
-            - name: Install Netlify CLI
-              run: npm install -g netlify-cli
-
             - name: Deploy to Netlify
-              run: npx netlify deploy --prod --dir=.next
+              uses: nwtgck/actions-netlify@v3.0
+              with:
+                  publish-dir: '.next'
+                  production-branch: master
+                  deploy-message: '${{ github.event.head_commit.message }}'
               env:
                   NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
                   NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
