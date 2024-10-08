@@ -92,11 +92,11 @@ jobs:
             - name: Build the App
               run: yarn build
 
-            - name: Deploy to Vercel
-              uses: amondnet/vercel-action@v25
-              with:
-                  vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
-                  github-token: ${{ secrets.GITHUB_TOKEN }} # Optional
-                  vercel-args: '--prod' # Optional for production deployment
-                  vercel-org-id: osamasilvake # Your username as ORG_ID for personal account
-                  vercel-project-id: prj_XaXNUDmKDQlvrbTtvTXehGHlZrZN # Your Project ID
+            - name: Install Netlify CLI
+              run: npm install -g netlify-cli
+
+            - name: Deploy to Netlify
+              run: npx netlify deploy --prod --dir=.next
+              env:
+                  NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+                  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
