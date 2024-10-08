@@ -97,3 +97,5 @@ jobs:
               with:
                   vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
                   vercel-args: '--prod'
+                  vercel-org-id: ${{ secrets.VERCEL_ORG_ID }} # Required, your team ID
+                  vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }} # Required
