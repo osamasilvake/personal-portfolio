@@ -92,16 +92,10 @@ jobs:
             - name: Build the App
               run: yarn build
 
-            - name: Deploy to Netlify
-              uses: nwtgck/actions-netlify@v3.0
+            - name: Deploy to Vercel
+              uses: amondnet/vercel-action@v25
               with:
-                  publish-dir: '.next'
-                  production-branch: master
-                  deploy-message: '${{ github.event.head_commit.message }}'
-                  enable-pull-request-comment: false
-                  enable-commit-comment: true
-                  overwrites-pull-request-comment: true
-              env:
-                  NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-                  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-                  timeout-minutes: 1
+                  vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
+                  github-token: ${{ secrets.GITHUB_TOKEN }} # Optional
+                  vercel-args: '--prod' # Optional for production deployment
+                  vercel-project-id: ${{ secrets.PROJECT_ID }} # Required
