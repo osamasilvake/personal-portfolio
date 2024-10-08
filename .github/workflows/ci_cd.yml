@@ -98,4 +98,5 @@ jobs:
                   vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
                   github-token: ${{ secrets.GITHUB_TOKEN }} # Optional
                   vercel-args: '--prod' # Optional for production deployment
+                  vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
                   vercel-project-id: ${{ secrets.PROJECT_ID }} # Required
