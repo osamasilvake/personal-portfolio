@@ -23,8 +23,8 @@
 	},
 	"Profile": {
 		"description": {
-			"intro": "Ich bin ein autodidaktischer Frontend-Entwickler aus Pakistan, auf",
-			"specialties": "React.js, Next.js, Typescript",
+			"intro": "Ich bin ein autodidaktischer Frontend-Entwickler aus Pakistan, auf ",
+			"specialties": "React.js, Next.js, Vue.js, Typescript",
 			"passion": "Ich bin leidenschaftlich daran interessiert, coole Websites zu erstellen, und ich teile gerne die Dinge, die ich lerne, mit meinem"
 		},
 		"statistics": {
@@ -43,7 +43,7 @@
 		"description": {
 			"intro": "Ich bin ein engagierter Frontend-Entwickler mit meiner Expertise in HTML5, SCSS, Javascript, Typescript, React und Next.js. Es macht mir Spaß, moderne und reaktionsfähige UX/UI-Designs zu entwerfen und zu entwickeln, die für den Endbenutzer intuitiv und ansprechend sind. Ich liebe es wirklich, Apps von Grund auf zu entwickeln und möchte in einem organisierten Team und Umfeld arbeiten.",
 			"code_quality": "Ich halte meinen Code gerne sauber und gut organisiert. Ich verwende Einrückungen und füge Kommentare zu jedem Teil des Codes hinzu, damit ich und das Team die Funktionalität später leichter verstehen können. Darüber hinaus versuche ich, eine gute Ordnerstruktur der App beizubehalten, um die Gesamtqualität des Projekts aufrechtzuerhalten und eine einfache Skalierung der App ohne große Hürden und Mühen zu ermöglichen.",
-			"current_learning": "Derzeit habe ich begonnen, mich über das Angular Framework zu informieren."
+			"current_learning": "Derzeit habe ich begonnen, mich über das Vue Framework zu informieren."
 		}
 	},
 	"PortfolioPageHeadings": {

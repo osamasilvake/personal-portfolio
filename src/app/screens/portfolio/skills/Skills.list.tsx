@@ -9,12 +9,12 @@ export const skillList: TagsData[] = [
 	{
 		id: 1,
 		title: 'Frameworks',
-		items: ['React', 'Next', 'Vue']
+		items: ['React', 'Next', 'Vue 3']
 	},
 	{
 		id: 2,
 		title: 'State Management',
-		items: ['Redux + Toolkit', 'Zustand']
+		items: ['Redux + Toolkit', 'Vuex', 'Pinia']
 	},
 	{
 		id: 3,

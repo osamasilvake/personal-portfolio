@@ -17,21 +17,12 @@ export const ExperienceList: ExperienceItem[] = [
 		image: javascript
 	},
 	{
-		id: 'Starter',
+		id: 'Previous',
 		title: 'Frontend Developer',
 		description: 'All Right Tech, August 2022 - January 2023',
 		startDate: dayjs('2022-08-01'),
 		endDate: dayjs('2023-01-31'),
 		content: '6 Months',
-		image: typescript
-	},
-	{
-		id: 'Silver',
-		title: 'Backend Developer',
-		description: 'Hello Tech, August 2021 - January 2022',
-		startDate: dayjs('2021-01-01'),
-		endDate: dayjs('2022-02-01'),
-		content: '1 Year 1 Month',
 		image: typescript
 	}
 ];

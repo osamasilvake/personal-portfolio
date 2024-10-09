@@ -13,7 +13,7 @@ const Home = () => {
 				<Service />
 
 				<div className="pt-10 pb-5 lg:pt-0">
-					<Image src={osama} alt="Muhammad usama" className="w-80 h-auto" priority />
+					<Image src={osama} alt="Muhammad usama" className="w-80 h-auto animate-fade-in" priority />
 				</div>
 
 				<Profile />
