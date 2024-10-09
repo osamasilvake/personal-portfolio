@@ -4,6 +4,7 @@ import git from '@/assets/svg/portfolio/expertise/git.svg';
 import html5 from '@/assets/svg/portfolio/expertise/html5.svg';
 import javascript from '@/assets/svg/portfolio/expertise/javascript.svg';
 import next from '@/assets/svg/portfolio/expertise/next-js (1).svg';
+import vue from '@/assets/svg/portfolio/expertise/vue.svg';
 import node from '@/assets/svg/portfolio/expertise/node.svg';
 import npm from '@/assets/svg/portfolio/expertise/npm.svg';
 import react from '@/assets/svg/portfolio/expertise/react.svg';
@@ -31,6 +32,10 @@ export const profileSkillsList: ProfileSkills[] = [
 	{
 		image: next,
 		name: 'Next js'
+	},
+	{
+		image: vue,
+		name: 'Vue js'
 	},
 	{
 		image: node,

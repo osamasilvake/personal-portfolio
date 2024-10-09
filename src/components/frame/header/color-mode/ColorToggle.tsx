@@ -17,9 +17,9 @@ const ColorToggle = () => {
 	return (
 		<IconButton onClickHandler={changeTheme} label="Color toggle">
 			{theme === ColorType.LIGHT ? (
-				<FiMoon className="w-6 h-6 text-black animate-fade-in" aria-label="Switch to dark " />
+				<FiMoon className="w-6 h-6 text-black" aria-label="Switch to dark " />
 			) : (
-				<FiSun className="w-6 h-6 text-orange-400 animate-fade-in" aria-label="Switch to light" />
+				<FiSun className="w-6 h-6 text-orange-400" aria-label="Switch to light" />
 			)}
 		</IconButton>
 	);
