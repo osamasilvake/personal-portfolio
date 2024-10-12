@@ -63,7 +63,7 @@ jobs:
               run: yarn install
 
             - name: Run Tests
-              run: echo "test kro"
+              run: yarn test
 
     deploy:
         needs: test # Ensure testing is done before deployment
