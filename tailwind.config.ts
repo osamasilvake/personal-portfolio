@@ -16,7 +16,11 @@ const config: Config = {
 				105: '#f2f5fa',
 				106: '#212121',
 				107: '#6fb98f',
-				108: '#6a6c6d'
+				108: '#7b7b7b',
+				109: '#2b2b2b',
+				110: '#dcd7d7',
+				111: '#353535',
+				112: '#2a2a2a'
 			},
 			maxWidth: {
 				201: '75rem'
@@ -36,7 +40,7 @@ const config: Config = {
 				}
 			},
 			animation: {
-				'fade-in': 'fadeIn 2s ease-in-out'
+				'fade-in': 'fadeIn 1.6s ease-in-out'
 			}
 		}
 	},

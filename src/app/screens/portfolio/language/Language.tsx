@@ -10,7 +10,7 @@ const Language = () => {
 	const t = useTranslations('PortfolioPageHeadings');
 
 	return (
-		<section className="pt-8 pb-6 border-b dark:border-b-gray-700" aria-label="language">
+		<section className="pt-8 pb-6 border-b border-b-110 dark:border-b-109" aria-label="language">
 			<PortfolioHeading
 				headingLevel={PortfolioHeadingLevel.H2}
 				title={t('language.title')}

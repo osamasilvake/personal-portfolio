@@ -7,7 +7,7 @@ const Footer = () => {
 	const t = useTranslations('Footer');
 
 	return (
-		<footer className="flex justify-center items-center gap-1 p-2.5 border-t dark:border-t-gray-700">
+		<footer className="flex justify-center items-center gap-1 p-2.5 border-t border-t-110 dark:border-t-109">
 			<p className="text-sm dark:text-108">{t('title')}</p>
 			<Image src={nextjs} alt="Next.js" className="w-5 h-5 rounded-full" />
 			<span className="text-sm dark:text-108">(14.4.1)</span>

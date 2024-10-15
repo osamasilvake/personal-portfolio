@@ -33,16 +33,18 @@ const Profile = () => {
 				</Button>
 			</div>
 
-			<div aria-label="profile-statistics">
-				<div className="flex mb-1">
-					<p className="font-bold text-xl dark:text-108 w-28">{t('statistics.years')}</p>
-					<p className="font-bold text-xl dark:text-108 w-20">{t('statistics.clientCount')}</p>
-					<p className="font-bold text-xl dark:text-108">{t('statistics.satisfactionRate')}</p>
+			<div className="flex" aria-label="profile-statistics">
+				<div>
+					<h2 className="font-bold text-xl dark:text-108 w-28">{t('statistics.years')}</h2>
+					<p className="dark:text-108 pt-1 text-sm w-28">{t('statistics.experience')}</p>
 				</div>
-				<div className="flex">
-					<p className="dark:text-108 text-sm w-28">{t('statistics.experience')}</p>
-					<p className="dark:text-108 text-sm w-20">{t('statistics.clients')}</p>
-					<p className="dark:text-108 text-sm">{t('statistics.satisfaction')}</p>
+				<div>
+					<h2 className="font-bold text-xl dark:text-108 w-20">{t('statistics.clientCount')}</h2>
+					<p className="dark:text-108 pt-1 text-sm w-20">{t('statistics.clients')}</p>
+				</div>
+				<div>
+					<h2 className="font-bold text-xl dark:text-108">{t('statistics.satisfactionRate')}</h2>
+					<p className="dark:text-108 pt-1 text-sm">{t('statistics.satisfaction')}</p>
 				</div>
 			</div>
 		</div>

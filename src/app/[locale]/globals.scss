@@ -7,6 +7,14 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+// [data-theme='dark'] {
+// 	background-color: black;
+// 	--text-color: #7b7b7b;
+// }
+// [data-theme='light'] {
+// 	background-color: white;
+// 	--text-color: black;
+// }
 
 @function fontSize($size) {
 	@return $size / 16px * 1rem;
@@ -16,10 +24,14 @@ h1 {
 	font-size: fontSize(40px);
 	font-weight: 700;
 	line-height: 2.25rem;
-	color: rgb(73, 68, 68);
+	color: var(--text-color);
 }
 
 h2 {
 	font-size: fontSize(30px);
 	font-weight: 500;
+	color: var(--text-color);
+}
+h3 {
+	color: var(--text-color);
 }

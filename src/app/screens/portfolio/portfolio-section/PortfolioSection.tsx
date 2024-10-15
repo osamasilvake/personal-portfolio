@@ -12,15 +12,15 @@ const PortfolioSection = (props: PortfolioProps) => {
 
 	const classes = {
 		listStyle: experience
-			? 'before:border-l dark:before:border-108 before:absolute before:left-7 before:bottom-[20%] before:top-[20%]'
-			: 'border-b dark:border-b-gray-700 pb-10 pt-6',
+			? 'before:border-l dark:before:border-111 before:absolute before:left-7 before:bottom-[20%] before:top-[20%]'
+			: 'border-b border-b-110 dark:border-b-109 pb-10 pt-6',
 		listItemStyle: experience ? 'pt-8' : 'pt-4 pb-2',
 		paddingStyle: experience ? 'pt-8' : ''
 	};
 
 	const getBackgroundColor = (id: string) => {
 		if (id === ExperienceListType.Current) {
-			return 'bg-103';
+			return 'bg-green-500';
 		} else {
 			return 'bg-white dark:bg-106';
 		}
@@ -30,7 +30,7 @@ const PortfolioSection = (props: PortfolioProps) => {
 		if (id === ExperienceListType.Current) {
 			return 'text-white';
 		} else {
-			return 'text-108';
+			return 'text-black dark:text-108';
 		}
 	};
 
@@ -40,7 +40,7 @@ const PortfolioSection = (props: PortfolioProps) => {
 				<PortfolioHeading headingLevel={headingLevel} title={title} subTitle={subTitle} />
 			</div>
 			<div className="relative">
-				<ul className={`border-b dark:border-b-gray-700 pb-10 ${classes.listStyle}`}>
+				<ul className={`border-b border-b-110 dark:border-b-109 pb-10 ${classes.listStyle}`}>
 					{list?.map((item) => {
 						const duration = calculateDuration({
 							startDate: item.startDate?.toString(),
@@ -54,7 +54,7 @@ const PortfolioSection = (props: PortfolioProps) => {
 									<div>
 										{experience ? (
 											<p
-												className={`w-14 h-14 text-xs border dark:border-gray-700 rounded-full shadow-sm text-center pt-5 ${getTextColor(
+												className={`w-14 h-14 text-xs border dark:border-green-500 rounded-full shadow-sm text-center pt-5 ${getTextColor(
 													item.id
 												)} ${getBackgroundColor(item.id)}`}>
 												{durationString}
@@ -63,7 +63,7 @@ const PortfolioSection = (props: PortfolioProps) => {
 											<Image
 												src={item.image}
 												alt={item.title}
-												className="cursor-help size-12 p-0.5 border border-104 dark:border-108"
+												className="cursor-help size-12 p-0.5 border border-104 dark:border-111"
 											/>
 										)}
 									</div>
@@ -74,7 +74,7 @@ const PortfolioSection = (props: PortfolioProps) => {
 									<p className="text-gray-500 dark:text-108">
 										{item.description}
 										{item.current && (
-											<span className="border ml-1 px-1 border-red-400 rounded-xl text-red-400 text-xs">
+											<span className="border ml-1 px-1 border-green-500 rounded-xl text-green-500 text-xs">
 												{item.current}
 											</span>
 										)}
