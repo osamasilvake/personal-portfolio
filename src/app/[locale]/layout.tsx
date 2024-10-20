@@ -22,10 +22,10 @@ export const metadata: Metadata = {
 const LocalLayout = ({ children, params: { locale } }: LocalProps) => {
 	const messages = useMessages();
 	return (
-		<html lang={locale} suppressHydrationWarning={true}>
+		<html lang={locale} suppressHydrationWarning={true} className="dark:bg-red-500">
 			<body className={inter.className} suppressHydrationWarning={true}>
 				<NextIntlClientProvider locale={locale} messages={messages}>
-					<ThemeProvider enableSystem defaultTheme="light" attribute="class">
+					<ThemeProvider enableSystem defaultTheme="system" attribute="class">
 						<div className="max-w-201 mx-auto px-4 sm:px-7">
 							<Header />
 							{children}

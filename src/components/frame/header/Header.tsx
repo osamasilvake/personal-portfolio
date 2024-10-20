@@ -31,7 +31,7 @@ const Header = () => {
 					<div className="h-6 w-6">
 						<ColorToggle />
 					</div>
-					<div className="bg-105 dark:bg-108">
+					<div className="bg-105 dark:bg-106">
 						<LanguageToggle />
 					</div>
 				</div>

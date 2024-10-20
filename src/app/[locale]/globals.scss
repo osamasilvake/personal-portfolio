@@ -7,14 +7,13 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-// [data-theme='dark'] {
-// 	background-color: black;
-// 	--text-color: #7b7b7b;
-// }
-// [data-theme='light'] {
-// 	background-color: white;
-// 	--text-color: black;
-// }
+
+@layer base {
+	body {
+		@apply dark:bg-[#0a0a0a] 
+		  bg-[#edf6f9];
+	}
+}
 
 @function fontSize($size) {
 	@return $size / 16px * 1rem;

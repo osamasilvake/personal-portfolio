@@ -37,11 +37,16 @@ export const skillList: TagsData[] = [
 	},
 	{
 		id: 5,
+		title: 'Testing',
+		items: ['Vitest', 'Jest']
+	},
+	{
+		id: 6,
 		title: 'Database',
 		items: ['Firebase', 'Mongodb', 'Mysql']
 	},
 	{
-		id: 6,
+		id: 7,
 		title: 'Miscellaneous',
 		items: ['Yarn', 'NPM', 'Node', 'Git', 'VSCode', 'Xcode', 'WebStorm']
 	}
