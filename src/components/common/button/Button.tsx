@@ -21,7 +21,7 @@ const Button = (props: ButtonInterface) => {
 
 		outlinedInDefault:
 			variant === ButtonVariantEnum.OUTLINED_IN_DEFAULT
-				? 'dark:text-104 hover:text-red-700 dark:hover:text-red-400 focus:text-red-800 dark:focus:red-600 outline outline-2 outline-black dark:outline-111 hover:outline-red-800 dark:hover:outline-red-700 focus:outline-red-600 dark:focus:outline-red-800'
+				? 'dark:text-108 hover:text-red-700 dark:hover:text-red-400 focus:text-red-800 dark:focus:red-600 outline outline-2 outline-black dark:outline-111 hover:outline-red-800 dark:hover:outline-red-700 focus:outline-red-600 dark:focus:outline-red-800'
 				: '',
 		outlinedInPurple:
 			variant === ButtonVariantEnum.OUTLINED_IN_PURPLE
