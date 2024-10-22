@@ -17,6 +17,7 @@
 		"jest": true // enables unit-testing
 	},
 	"rules": {
+		"@typescript-eslint/no-explicit-any": "off",
 		"simple-import-sort/imports": "error",
 		"simple-import-sort/exports": "error",
 		"@typescript-eslint/explicit-function-return-type": "off",

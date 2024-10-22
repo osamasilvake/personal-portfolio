@@ -4,7 +4,7 @@ import { startTransition } from 'react';
 
 import Button from '@/components/common/button/Button';
 import { ButtonVariantEnum } from '@/components/common/button/Button.enum';
-import { usePathname, useRouter } from '@/navigation';
+import { usePathname, useRouter } from '@/i18n/routing';
 
 import { LanguageType } from './LanguageToggle.enum';
 
