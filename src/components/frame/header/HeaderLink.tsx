@@ -1,7 +1,6 @@
 'use client';
 
 import { useSelectedLayoutSegment } from 'next/navigation';
-import { ComponentProps } from 'react';
 
 import { Link } from '@/i18n/routing';
 
