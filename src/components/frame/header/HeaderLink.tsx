@@ -4,7 +4,12 @@ import { useSelectedLayoutSegment } from 'next/navigation';
 
 import { Link } from '@/i18n/routing';
 
-const HeaderLink = ({ href, title }) => {
+interface HeaderLinkProps {
+	href: string;
+	title: string;
+}
+
+const HeaderLink = ({ href, title }: HeaderLinkProps) => {
 	const selectedLayoutSegment = useSelectedLayoutSegment();
 	const pathname = selectedLayoutSegment ? `/${selectedLayoutSegment}` : '/';
 	const isActive = pathname === href;
