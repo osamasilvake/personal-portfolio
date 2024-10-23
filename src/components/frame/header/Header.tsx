@@ -14,16 +14,16 @@ const Header = () => {
 
 	return (
 		<header>
-			<nav className="flex justify-between items-center mt-5">
+			<nav className="flex justify-between items-center mt-5 flex-col-reverse space-y-3 sm:space-y-0 sm:flex-row">
 				<div className="flex gap-8 sm:w-72">
 					<HeaderLink href="/" title={t('home')} />
 					<HeaderLink href="/portfolio" title={t('portfolio')} />
-					{/* <HeaderLink href="/">{t('home')}</HeaderLink>
-					<HeaderLink href="/portfolio">{t('portfolio')}</HeaderLink> */}
 				</div>
 
 				<div>
-					<p className="dark:text-108 w-40 font-semibold text-xl  leading-8 hidden md:block">Osami</p>
+					<p className="dark:text-108 w-40 font-semibold text-xl leading-8 text-center sm:text-start block sm:hidden md:block">
+						Osami
+					</p>
 				</div>
 
 				<div className="flex items-center gap-6">
