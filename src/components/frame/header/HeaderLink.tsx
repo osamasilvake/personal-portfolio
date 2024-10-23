@@ -1,15 +1,11 @@
 'use client';
 
 import { useSelectedLayoutSegment } from 'next/navigation';
+import { ComponentProps } from 'react';
 
 import { Link } from '@/i18n/routing';
 
-interface HeaderLinkProps {
-	href: string;
-	title: string;
-}
-
-const HeaderLink = ({ href, title }: HeaderLinkProps) => {
+const HeaderLink = ({ href, title }: ComponentProps<typeof Link>) => {
 	const selectedLayoutSegment = useSelectedLayoutSegment();
 	const pathname = selectedLayoutSegment ? `/${selectedLayoutSegment}` : '/';
 	const isActive = pathname === href;

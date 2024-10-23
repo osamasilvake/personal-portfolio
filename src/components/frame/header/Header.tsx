@@ -18,6 +18,8 @@ const Header = () => {
 				<div className="flex gap-8 sm:w-72">
 					<HeaderLink href="/" title={t('home')} />
 					<HeaderLink href="/portfolio" title={t('portfolio')} />
+					{/* <HeaderLink href="/">{t('home')}</HeaderLink>
+					<HeaderLink href="/portfolio">{t('portfolio')}</HeaderLink> */}
 				</div>
 
 				<div>
