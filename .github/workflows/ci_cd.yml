@@ -33,7 +33,7 @@ jobs:
               run: yarn install
 
             - name: Run ESLint
-              run: yarn lint:es
+              run: yarn lint
 
             - name: Run Prettier Check
               run: yarn pretty:check
