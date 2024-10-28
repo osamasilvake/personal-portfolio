@@ -5,11 +5,6 @@ const PortfolioHeading = (props: PortfolioProps) => {
 	const { title, subTitle, headingLevel = PortfolioHeadingLevel.H1, headingStyle } = props;
 	const Heading = headingLevel;
 
-	// const size = {
-	// 	large: headingLevel === PortfolioHeadingLevel.H1 ? 'text-3xl' : '',
-	// 	medium: headingLevel === PortfolioHeadingLevel.H2 ? 'text-3xl' : ''
-	// };
-
 	return (
 		<div>
 			<Heading className={`dark:text-108 ${headingStyle}`}>{title}</Heading>

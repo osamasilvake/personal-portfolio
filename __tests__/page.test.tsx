@@ -1,8 +1,8 @@
-import { vi } from 'vitest';
 import { render, screen, waitFor } from '@testing-library/react';
-import { describe, expect, it } from 'vitest';
-import RootPage from '../src/app/page';
 import { redirect } from 'next/navigation';
+import { describe, expect, it, vi } from 'vitest';
+
+import RootPage from '../src/app/page';
 
 // Mock the redirect function
 vi.mock('next/navigation', () => ({

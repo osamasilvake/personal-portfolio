@@ -1,5 +1,5 @@
 'use client';
-import { Fragment, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const BackToTopButton = () => {
 	const [show, setShow] = useState(false);
