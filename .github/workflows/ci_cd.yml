@@ -9,7 +9,7 @@ on:
             - master
 
 jobs:
-    # Lint Job: Install dependencies, lint code, and upload `node_modules`
+    # Lint Job: Install dependencies, lint code, and upload compressed `node_modules`
     lint:
         runs-on: ubuntu-latest
         steps:
@@ -35,13 +35,16 @@ jobs:
             - name: Run Prettier Check
               run: yarn pretty:check
 
+            - name: Compress node_modules
+              run: zip -r node_modules.zip node_modules
+
             - name: Upload node_modules as artifact
               uses: actions/upload-artifact@v3
               with:
                   name: node_modules
-                  path: node_modules
+                  path: node_modules.zip
 
-    # Test Job: Download `node_modules` artifact and run tests
+    # Test Job: Download and unzip `node_modules` artifact and run tests
     test:
         needs: lint
         runs-on: ubuntu-latest
@@ -58,12 +61,15 @@ jobs:
               uses: actions/download-artifact@v3
               with:
                   name: node_modules
-                  path: node_modules
+                  path: .
+
+            - name: Unzip node_modules
+              run: unzip node_modules.zip
 
             - name: Run Tests
               run: yarn test
 
-    # Deploy Job: Download `node_modules` artifact, build, and deploy
+    # Deploy Job: Download and unzip `node_modules` artifact, build, and deploy
     deploy:
         needs: test
         runs-on: ubuntu-latest
@@ -81,7 +87,10 @@ jobs:
               uses: actions/download-artifact@v3
               with:
                   name: node_modules
-                  path: node_modules
+                  path: .
+
+            - name: Unzip node_modules
+              run: unzip node_modules.zip
 
             - name: Build the App
               run: yarn build
@@ -89,7 +98,7 @@ jobs:
             - name: Deploy to Vercel
               uses: amondnet/vercel-action@v25
               with:
-                  vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
+                  vercel-token: ${{ secrets.VERCEL_TOKEN }}
                   vercel-args: '--prod'
-                  vercel-org-id: ${{ secrets.VERCEL_ORG_ID }} # Required, your team ID
-                  vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }} # Required
+                  vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+                  vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
