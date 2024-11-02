@@ -9,9 +9,9 @@ on:
             - master
 
 jobs:
+    # Lint Job: Install dependencies, lint code, and upload `node_modules`
     lint:
         runs-on: ubuntu-latest
-
         steps:
             - name: Checkout Code
               uses: actions/checkout@v4
@@ -21,13 +21,13 @@ jobs:
               with:
                   node-version: 22
 
-            - name: Cache node_modules
+            - name: Cache Yarn Cache
               uses: actions/cache@v4
               with:
-                  path: node_modules
-                  key: ${{ runner.os }}-yarn-cache-${{ hashFiles('**/yarn.lock') }}
+                  path: ~/.cache/yarn
+                  key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
                   restore-keys: |
-                      ${{ runner.os }}-yarn-cache-
+                      ${{ runner.os }}-yarn-
 
             - name: Install Dependencies
               run: yarn install
@@ -35,10 +35,16 @@ jobs:
             - name: Run Prettier Check
               run: yarn pretty:check
 
-    test:
-        needs: lint # Ensure linting is done before testing
-        runs-on: ubuntu-latest
+            - name: Upload node_modules as artifact
+              uses: actions/upload-artifact@v3
+              with:
+                  name: node_modules
+                  path: node_modules
 
+    # Test Job: Download `node_modules` artifact and run tests
+    test:
+        needs: lint
+        runs-on: ubuntu-latest
         steps:
             - name: Checkout Code
               uses: actions/checkout@v4
@@ -48,24 +54,20 @@ jobs:
               with:
                   node-version: 22
 
-            - name: Cache node_modules
-              uses: actions/cache@v4
+            - name: Download node_modules artifact
+              uses: actions/download-artifact@v3
               with:
+                  name: node_modules
                   path: node_modules
-                  key: ${{ runner.os }}-yarn-cache-${{ hashFiles('**/yarn.lock') }}
-                  restore-keys: |
-                      ${{ runner.os }}-yarn-cache-
-
-            - name: Install Dependencies
-              run: yarn install
 
             - name: Run Tests
               run: yarn test
 
+    # Deploy Job: Download `node_modules` artifact, build, and deploy
     deploy:
-        needs: test # Ensure testing is done before deployment
+        needs: test
         runs-on: ubuntu-latest
-
+        if: github.ref == 'refs/heads/master'
         steps:
             - name: Checkout Code
               uses: actions/checkout@v4
@@ -75,16 +77,11 @@ jobs:
               with:
                   node-version: 22
 
-            - name: Cache node_modules
-              uses: actions/cache@v4
+            - name: Download node_modules artifact
+              uses: actions/download-artifact@v3
               with:
+                  name: node_modules
                   path: node_modules
-                  key: ${{ runner.os }}-yarn-cache-${{ hashFiles('**/yarn.lock') }}
-                  restore-keys: |
-                      ${{ runner.os }}-yarn-cache-
-
-            - name: Install Dependencies
-              run: yarn install
 
             - name: Build the App
               run: yarn build
