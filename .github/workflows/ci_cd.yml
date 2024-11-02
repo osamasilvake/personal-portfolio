@@ -9,11 +9,8 @@ on:
             - master
 
 jobs:
-    # Reusable job for caching and installing dependencies
-    setup:
+    lint:
         runs-on: ubuntu-latest
-        outputs:
-            node_modules-path: node_modules # Makes node_modules available to other jobs
         steps:
             - name: Checkout Code
               uses: actions/checkout@v4
@@ -23,31 +20,16 @@ jobs:
               with:
                   node-version: 22
 
-            - name: Cache node_modules
-              id: yarn-cache
+            - name: Cache Yarn Cache
               uses: actions/cache@v4
               with:
-                  path: node_modules
+                  path: ~/.cache/yarn
                   key: ${{ runner.os }}-yarn-cache-${{ hashFiles('**/yarn.lock') }}
                   restore-keys: |
                       ${{ runner.os }}-yarn-cache-
 
             - name: Install Dependencies
-              if: steps.yarn-cache.outputs.cache-hit != 'true'
               run: yarn install
-
-    # Lint job depends on setup job
-    lint:
-        needs: setup
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout Code
-              uses: actions/checkout@v4
-
-            - name: Use Node.js
-              uses: actions/setup-node@v4
-              with:
-                  node-version: 22
 
             - name: Run ESLint
               run: yarn lint
@@ -55,35 +37,49 @@ jobs:
             - name: Run Prettier Check
               run: yarn pretty:check
 
-    # Test job depends on setup and lint
+            - name: Upload node_modules as artifact
+              uses: actions/upload-artifact@v3
+              with:
+                  name: node_modules
+                  path: node_modules
+
     test:
-        needs: [setup, lint]
+        needs: lint
         runs-on: ubuntu-latest
         steps:
             - name: Checkout Code
               uses: actions/checkout@v4
 
-            - name: Use Node.js
+            - name: Setup Node.js
               uses: actions/setup-node@v4
               with:
                   node-version: 22
 
+            - name: Download node_modules artifact
+              uses: actions/download-artifact@v3
+              with:
+                  name: node_modules
+
             - name: Run Tests
               run: yarn test
 
-    # Deploy job depends on setup and test
     deploy:
-        needs: [setup, test]
+        needs: test
         runs-on: ubuntu-latest
         if: github.ref == 'refs/heads/master'
         steps:
             - name: Checkout Code
               uses: actions/checkout@v4
 
-            - name: Use Node.js
+            - name: Setup Node.js
               uses: actions/setup-node@v4
               with:
                   node-version: 22
+
+            - name: Download node_modules artifact
+              uses: actions/download-artifact@v3
+              with:
+                  name: node_modules
 
             - name: Build the App
               run: yarn build
