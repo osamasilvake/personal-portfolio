@@ -46,7 +46,7 @@ export default [
 
 			parser: tsParser,
 			ecmaVersion: 'latest',
-			sourceType: 'module',
+			sourceType: 'commonjs',
 
 			parserOptions: {
 				ecmaFeatures: {
