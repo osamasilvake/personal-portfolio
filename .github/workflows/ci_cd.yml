@@ -72,7 +72,7 @@ jobs:
             - name: Run Tests
               run: yarn test
 
-    # Deploy Job: Download and unzip `node_modules` artifact, verify dependencies, build, and deploy
+    # Deploy Job: Download `node_modules` artifact, build, and deploy
     deploy:
         needs: test
         runs-on: ubuntu-latest
@@ -90,13 +90,7 @@ jobs:
               uses: actions/download-artifact@v3
               with:
                   name: node_modules
-                  path: .
-
-            - name: Unzip node_modules
-              run: unzip node_modules.zip
-
-            - name: Verify and Install Missing Dependencies
-              run: yarn install --frozen-lockfile
+                  path: node_modules
 
             - name: Build the App
               run: yarn build
@@ -104,7 +98,7 @@ jobs:
             - name: Deploy to Vercel
               uses: amondnet/vercel-action@v25
               with:
-                  vercel-token: ${{ secrets.VERCEL_TOKEN }}
+                  vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
                   vercel-args: '--prod'
-                  vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-                  vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+                  vercel-org-id: ${{ secrets.VERCEL_ORG_ID }} # Required, your team ID
+                  vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }} # Required
