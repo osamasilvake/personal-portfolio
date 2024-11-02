@@ -7,7 +7,7 @@
 		"build": "next build",
 		"start": "next start",
 		"test": "vitest",
-		"lint": "eslint",
+		"lint": "eslint .",
 		"pretty:check": "prettier --check ./**/*.{js,jsx,ts,tsx,json}",
 		"pretty:apply": "prettier --write ./**/*.{js,jsx,ts,tsx,json}",
 		"lint:fix": "eslint --fix",
@@ -34,6 +34,7 @@
 	"devDependencies": {
 		"@commitlint/cli": "^19.5.0",
 		"@commitlint/config-conventional": "^19.5.0",
+		"@eslint/compat": "^1.2.2",
 		"@eslint/eslintrc": "^3.1.0",
 		"@eslint/js": "^9.13.0",
 		"@next/eslint-plugin-next": "^15.0.1",

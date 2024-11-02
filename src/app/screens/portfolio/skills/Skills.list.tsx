@@ -29,9 +29,9 @@ export const skillList: TagsData[] = [
 			'CSS3',
 			'SCSS',
 			'Bootstrap',
-			'Tailwind',
-			'CSSResponsive',
-			'DesignCross-Browser',
+			'Tailwind-css',
+			'CSS-Responsive',
+			'Design-Cross-Browser',
 			'Cross-Browser Compatibility'
 		]
 	},
