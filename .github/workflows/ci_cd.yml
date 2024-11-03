@@ -60,10 +60,6 @@ jobs:
                   name: node_modules
                   path: node_modules
 
-            # Install missing dependencies (if any) after downloading node_modules
-            - name: Install Missing Dependencies
-              run: yarn install --frozen-lockfile
-
             - name: Run Tests
               run: yarn test
 
@@ -85,10 +81,6 @@ jobs:
               with:
                   name: node_modules
                   path: node_modules
-
-            # # Ensure all dependencies are resolved before building
-            # - name: Install Missing Dependencies
-            #   run: yarn install --frozen-lockfile
 
             - name: Build the App
               run: yarn build
