@@ -86,9 +86,9 @@ jobs:
                   name: node_modules
                   path: node_modules
 
-            # Ensure all dependencies are resolved before building
-            - name: Install Missing Dependencies
-              run: yarn install --frozen-lockfile
+            # # Ensure all dependencies are resolved before building
+            # - name: Install Missing Dependencies
+            #   run: yarn install --frozen-lockfile
 
             - name: Build the App
               run: yarn build
