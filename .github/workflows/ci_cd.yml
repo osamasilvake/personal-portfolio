@@ -1,105 +1,3 @@
-# name: Continuous Integration & Deployment
-
-# on:
-#     push:
-#         branches:
-#             - master
-#     pull_request:
-#         branches:
-#             - master
-
-# jobs:
-#     lint:
-#         runs-on: ubuntu-latest
-
-#         steps:
-#             - name: Checkout Code
-#               uses: actions/checkout@v4
-
-#             - name: Setup Node.js
-#               uses: actions/setup-node@v4
-#               with:
-#                   node-version: 22
-
-#             - name: Cache node_modules
-#               uses: actions/cache@v4
-#               with:
-#                   path: node_modules
-#                   key: ${{ runner.os }}-yarn-cache-${{ hashFiles('**/yarn.lock') }}
-#                   restore-keys: |
-#                       ${{ runner.os }}-yarn-cache-
-
-#             - name: Install Dependencies
-#               run: yarn install
-
-#             - name: Run ESLint
-#               run: yarn lint
-
-#             - name: Run Prettier Check
-#               run: yarn pretty:check
-
-#     test:
-#         needs: lint # Ensure linting is done before testing
-#         runs-on: ubuntu-latest
-
-#         steps:
-#             - name: Checkout Code
-#               uses: actions/checkout@v4
-
-#             - name: Setup Node.js
-#               uses: actions/setup-node@v4
-#               with:
-#                   node-version: 22
-
-#             - name: Cache node_modules
-#               uses: actions/cache@v4
-#               with:
-#                   path: node_modules
-#                   key: ${{ runner.os }}-yarn-cache-${{ hashFiles('**/yarn.lock') }}
-#                   restore-keys: |
-#                       ${{ runner.os }}-yarn-cache-
-
-#             - name: Install Dependencies
-#               run: yarn install
-
-#             - name: Run Tests
-#               run: yarn test
-
-#     deploy:
-#         needs: test # Ensure testing is done before deployment
-#         runs-on: ubuntu-latest
-
-#         steps:
-#             - name: Checkout Code
-#               uses: actions/checkout@v4
-
-#             - name: Setup Node.js
-#               uses: actions/setup-node@v4
-#               with:
-#                   node-version: 22
-
-#             - name: Cache node_modules
-#               uses: actions/cache@v4
-#               with:
-#                   path: node_modules
-#                   key: ${{ runner.os }}-yarn-cache-${{ hashFiles('**/yarn.lock') }}
-#                   restore-keys: |
-#                       ${{ runner.os }}-yarn-cache-
-
-#             - name: Install Dependencies
-#               run: yarn install
-
-#             - name: Build the App
-#               run: yarn build
-
-#             - name: Deploy to Vercel
-#               uses: amondnet/vercel-action@v25
-#               with:
-#                   vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
-#                   vercel-args: '--prod'
-#                   vercel-org-id: ${{ secrets.VERCEL_ORG_ID }} # Required, your team ID
-#                   vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }} # Required
-
 name: Continuous Integration & Deployment
 
 on:
@@ -134,11 +32,8 @@ jobs:
             - name: Install Dependencies
               run: yarn install
 
-            - name: Upload node_modules Artifact
-              uses: actions/upload-artifact@v4
-              with:
-                  name: node_modules
-                  path: node_modules
+            # - name: Run ESLint
+            #   run: yarn lint
 
             - name: Run Prettier Check
               run: yarn pretty:check
@@ -156,15 +51,16 @@ jobs:
               with:
                   node-version: 22
 
-            - name: Download node_modules Artifact
-              uses: actions/download-artifact@v4
+            - name: Cache node_modules
+              uses: actions/cache@v4
               with:
-                  name: node_modules
                   path: node_modules
+                  key: ${{ runner.os }}-yarn-cache-${{ hashFiles('**/yarn.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-yarn-cache-
 
-            # Install missing dependencies (if any) after downloading node_modules
-            - name: Install Missing Dependencies
-              run: yarn install --frozen-lockfile
+            - name: Install Dependencies
+              run: yarn install
 
             - name: Run Tests
               run: yarn test
@@ -182,15 +78,16 @@ jobs:
               with:
                   node-version: 22
 
-            - name: Download node_modules Artifact
-              uses: actions/download-artifact@v4
+            - name: Cache node_modules
+              uses: actions/cache@v4
               with:
-                  name: node_modules
                   path: node_modules
+                  key: ${{ runner.os }}-yarn-cache-${{ hashFiles('**/yarn.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-yarn-cache-
 
-            # Ensure all dependencies are resolved before building
-            - name: Install Missing Dependencies
-              run: yarn install --frozen-lockfile
+            - name: Install Dependencies
+              run: yarn install
 
             - name: Build the App
               run: yarn build
@@ -198,7 +95,110 @@ jobs:
             - name: Deploy to Vercel
               uses: amondnet/vercel-action@v25
               with:
-                  vercel-token: ${{ secrets.VERCEL_TOKEN }}
+                  vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
                   vercel-args: '--prod'
-                  vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-                  vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+                  vercel-org-id: ${{ secrets.VERCEL_ORG_ID }} # Required, your team ID
+                  vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }} # Required
+
+# name: Continuous Integration & Deployment
+
+# on:
+#     push:
+#         branches:
+#             - master
+#     pull_request:
+#         branches:
+#             - master
+
+# jobs:
+#     lint:
+#         runs-on: ubuntu-latest
+
+#         steps:
+#             - name: Checkout Code
+#               uses: actions/checkout@v4
+
+#             - name: Setup Node.js
+#               uses: actions/setup-node@v4
+#               with:
+#                   node-version: 22
+
+#             - name: Cache node_modules
+#               uses: actions/cache@v4
+#               with:
+#                   path: node_modules
+#                   key: ${{ runner.os }}-yarn-cache-${{ hashFiles('**/yarn.lock') }}
+#                   restore-keys: |
+#                       ${{ runner.os }}-yarn-cache-
+
+#             - name: Install Dependencies
+#               run: yarn install
+
+#             - name: Upload node_modules Artifact
+#               uses: actions/upload-artifact@v4
+#               with:
+#                   name: node_modules
+#                   path: node_modules
+
+#             - name: Run Prettier Check
+#               run: yarn pretty:check
+
+#     test:
+#         needs: lint # Ensure linting is done before testing
+#         runs-on: ubuntu-latest
+
+#         steps:
+#             - name: Checkout Code
+#               uses: actions/checkout@v4
+
+#             - name: Setup Node.js
+#               uses: actions/setup-node@v4
+#               with:
+#                   node-version: 22
+
+#             - name: Download node_modules Artifact
+#               uses: actions/download-artifact@v4
+#               with:
+#                   name: node_modules
+#                   path: node_modules
+
+#             # Install missing dependencies (if any) after downloading node_modules
+#             - name: Install Missing Dependencies
+#               run: yarn install --frozen-lockfile
+
+#             - name: Run Tests
+#               run: yarn test
+
+#     deploy:
+#         needs: test # Ensure testing is done before deployment
+#         runs-on: ubuntu-latest
+
+#         steps:
+#             - name: Checkout Code
+#               uses: actions/checkout@v4
+
+#             - name: Setup Node.js
+#               uses: actions/setup-node@v4
+#               with:
+#                   node-version: 22
+
+#             - name: Download node_modules Artifact
+#               uses: actions/download-artifact@v4
+#               with:
+#                   name: node_modules
+#                   path: node_modules
+
+#             # Ensure all dependencies are resolved before building
+#             - name: Install Missing Dependencies
+#               run: yarn install --frozen-lockfile
+
+#             - name: Build the App
+#               run: yarn build
+
+#             - name: Deploy to Vercel
+#               uses: amondnet/vercel-action@v25
+#               with:
+#                   vercel-token: ${{ secrets.VERCEL_TOKEN }}
+#                   vercel-args: '--prod'
+#                   vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+#                   vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
