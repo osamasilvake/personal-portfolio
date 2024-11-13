@@ -20,7 +20,7 @@ export const ExperienceList: ExperienceItem[] = [
 		id: 'Previous',
 		title: 'Frontend Developer',
 		description: 'All Right Tech, August 2022 - January 2023',
-		startDate: dayjs('2022-08-01'),
+		startDate: dayjs('2022-02-01'),
 		endDate: dayjs('2023-01-31'),
 		content: '6 Months',
 		image: typescript
