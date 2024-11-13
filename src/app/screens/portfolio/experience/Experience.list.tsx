@@ -10,7 +10,7 @@ export const ExperienceList: ExperienceItem[] = [
 		id: ExperienceListType.Current,
 		title: 'Frontend Developer',
 		description: 'Robotise, February 2024',
-		startDate: dayjs('2024-03-01'),
+		startDate: dayjs('2024-02-01'),
 		endDate: null, // null indicates current date
 		content: '9 Months',
 		current: 'Current',
