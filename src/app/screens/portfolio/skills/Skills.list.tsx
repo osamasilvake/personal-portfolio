@@ -19,7 +19,7 @@ export const skillList: TagsData[] = [
 	{
 		id: 3,
 		title: 'UI Frameworks',
-		items: ['Material-UI']
+		items: ['Material-UI', 'Shad-cn']
 	},
 	{
 		id: 4,
