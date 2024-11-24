@@ -8,7 +8,7 @@ export const EducationList: EducationItem[] = [
 	{
 		id: ExperienceListType.Current,
 		title: 'Oxford College',
-		description: 'Intermediate, Computer Science, 2020 - 2022, Pakistan',
+		description: 'Intermediate, Computer Science, 2021, Pakistan',
 		image: college,
 		name: 'Oxford'
 	},
@@ -17,6 +17,6 @@ export const EducationList: EducationItem[] = [
 		image: university,
 		name: 'Preston',
 		title: 'Preston University',
-		description: 'Bachelor, Computer Science, 2020 - 2024, Pakistan'
+		description: 'Bachelor, Computer Science, 2021 - 2024, Pakistan'
 	}
 ];
