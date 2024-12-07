@@ -31,11 +31,9 @@
 		},
 		"statistics": {
 			"experience": "Experience",
-			"clients": "Clients",
 			"satisfaction": "Satisfaction",
 			"years": "2 Years",
-			"clientCount": "10+",
-			"satisfactionRate": "98.8%"
+			"satisfactionRate": "100%"
 		},
 		"button": {
 			"title": "Hire me"
@@ -45,7 +43,7 @@
 		"description": {
 			"intro": "I am a dedicated Frontend Developer with my expertise in HTML5, SCSS, Javascript, Typescript, React, and Next.js. I enjoy designing and developing modern and responsive UX/UI designs that are intuitive and pleasing for the end-users. I really love to build apps from scratch and want to work in an organized team and environment.",
 			"code_quality": "I like to keep my code clean and well-organized. I use indentation and add comments to each part of the code to make it easy for me and the team to later understand the functionality with ease. Moreover, I try to keep a good folder structure of the app to maintain the overall quality of the project and make it easy to scale the app without any big hurdles and efforts.",
-			"current_learning": "Currently, I have started learning about the Vue Framework."
+			"current_learning": "Currently, I have started learning about React native."
 		}
 	},
 	"PortfolioPageHeadings": {

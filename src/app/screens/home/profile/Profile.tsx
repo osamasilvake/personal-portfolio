@@ -33,14 +33,10 @@ const Profile = () => {
 				</Button>
 			</div>
 
-			<div className="flex" aria-label="profile-statistics">
+			<div className="flex gap-5" aria-label="profile-statistics">
 				<div>
 					<h2 className="font-bold text-xl dark:text-108 w-28">{t('statistics.years')}</h2>
 					<p className="dark:text-108 pt-1 text-sm w-28">{t('statistics.experience')}</p>
-				</div>
-				<div>
-					<h2 className="font-bold text-xl dark:text-108 w-20">{t('statistics.clientCount')}</h2>
-					<p className="dark:text-108 pt-1 text-sm w-20">{t('statistics.clients')}</p>
 				</div>
 				<div>
 					<h2 className="font-bold text-xl dark:text-108">{t('statistics.satisfactionRate')}</h2>
