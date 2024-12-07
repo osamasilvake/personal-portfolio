@@ -10,6 +10,9 @@ import { ProfileType } from './Profile.enum';
 const Profile = () => {
 	const t = useTranslations('Profile');
 
+	const emailAddress = ProfileType.EMAIL;
+	const mailtoLink = `mailto:${emailAddress}`;
+
 	return (
 		<div className="w-full lg:w-72">
 			<div aria-labelledby="profile-introduction">
@@ -28,7 +31,7 @@ const Profile = () => {
 					label="button"
 					isDisabled={false}
 					variant={ButtonVariantEnum.OUTLINED_IN_DEFAULT}
-					onClickHandler={() => window.open(ProfileType.GITHUB, '_blank')}>
+					onClickHandler={() => (window.location.href = mailtoLink)}>
 					{t('button.title')}
 				</Button>
 			</div>
