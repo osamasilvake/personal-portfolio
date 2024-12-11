@@ -7,7 +7,7 @@ import { PortfolioHeadingLevel } from '../portfolio-heading/PortfolioHeading.enu
 export interface PortfolioProps {
 	headingLevel: PortfolioHeadingLevel;
 	title: string;
-	subTitle: string;
+	subTitle?: string;
 	position: ToolTipPositionEnum;
 	list: EducationItem[] | ExperienceItem[];
 	experience?: string;

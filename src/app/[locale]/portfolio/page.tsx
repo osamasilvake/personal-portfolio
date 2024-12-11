@@ -29,9 +29,6 @@ const Portfolio = () => {
 						<PortfolioSection
 							headingLevel={PortfolioHeadingLevel.H2}
 							title={t('education.title')}
-							subTitle={t('education.sub_title')}
-							// title={ProfileHeadingType.Education_Heading}
-							// subTitle={PortfolioHeadingType.Education_Sub_Heading}
 							list={EducationList}
 							position={ToolTipPositionEnum.TOP}
 						/>
@@ -39,8 +36,6 @@ const Portfolio = () => {
 							headingLevel={PortfolioHeadingLevel.H2}
 							title={t('experience.title')}
 							subTitle={t('experience.sub_title')}
-							// title={ProfileHeadingType.Experience_Heading}
-							// subTitle={PortfolioHeadingType.Experience_Sub_Heading}
 							list={ExperienceList}
 							experience={PortfolioSectionType.Experience}
 							position={ToolTipPositionEnum.BOTTOM}
