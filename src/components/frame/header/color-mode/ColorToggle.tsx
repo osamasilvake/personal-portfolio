@@ -16,11 +16,16 @@ const ColorToggle = () => {
 
 	return (
 		<IconButton onClickHandler={changeTheme} label="Color toggle">
-			{theme === ColorType.LIGHT ? (
-				<FiMoon className="w-6 h-6 text-black" aria-label="Switch to dark " />
-			) : (
-				<FiSun className="w-6 h-6 text-orange-400" aria-label="Switch to light" />
-			)}
+			<div
+				className={`flex items-center cursor-pointer transition-transform duration-500 ${
+					theme === ColorType.DARK ? 'rotate-180' : 'rotate-0'
+				}`}>
+				{theme === ColorType.LIGHT ? (
+					<FiMoon className="w-6 h-6 text-black rotate-0 transition-all" aria-label="Switch to dark " />
+				) : (
+					<FiSun className="w-6 h-6 text-orange-400 rotate-0 transition-all" aria-label="Switch to light" />
+				)}
+			</div>
 		</IconButton>
 	);
 };
